@@ -141,5 +141,29 @@ def fetchAllNames():
         nameArray.append(x["name"])
     return jsonify(nameArray)
 
+@app.route('/fetchStacks')
+def fetchStacks():
+    stackArray = []
+    for x in data:
+        if x['stacksUsed']:
+            for y in x['stacksUsed']:
+                stackArray.append(y)
+
+    stack_list = set(stackArray)
+    list_stack = list(stack_list)
+
+    return jsonify(list_stack)
+
+@app.route('/fetchStacksByName/<string:name>')
+def fetchStackByName(name):
+    stackArray = []
+    for x in data:
+        if x['stacksUsed']:
+            for y in x['stacksUsed']:
+                if(y == name):
+                    stackArray.append(x)
+
+    return jsonify(stackArray)
+
 if __name__ == '__main__':
     app.run(debug=True,port = int(os.environ.get('PORT',3000)))
