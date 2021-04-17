@@ -1,4 +1,6 @@
 Requirements -> Python 3.6 or Above
+Can only be run on a linux/MacOS System
+
 chromedriver insatlled
 
 For running the scraper
