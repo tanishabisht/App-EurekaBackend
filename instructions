@@ -1,0 +1,39 @@
+Requirements -> Python 3.6 or Above
+chromedriver insatlled
+
+For running the scraper
+
+Set up chromedriver
+
+Step 1: First download the ChromeDriver. Users need to download ChromeDriver for their respective Operating systems from this link(https://chromedriver.chromium.org/downloads). R
+
+
+
+Step 2: Once the zip file is downloaded for the operating system, unzip it to retrieve the chromedriver.exe executable file. Copy this file to a specific location of your choice.
+
+Step 3: Now copy the path where the ChromeDriver file is saved to set the system properties in environment variables. Follow the steps below to set the path in the environment variables.
+
+1. Right-click on My Computer and click on Properties
+
+2.  Click on the Change settings option and then click on the Advanced tab
+
+3.  Now select the Environmental variables from the Advanced tab
+
+
+4. Now, from the available options under system variables, select the Path option and click on Edit
+
+Selenium with ChromeDriver
+
+5. At the end of the string, enter a semicolon ‘;’ and paste the path of your ChromeDriver file that you copied earlier, and click OK.
+
+For flask app
+
+It is recommended to use a python virtual environment
+
+Use the command pip install -r requirements.txt
+Run the app with the command python app.py or python3 app.py depending on your version
+Access the home page on http://localhost:3000/
+
+API Documentation is provided in https://documenter.getpostman.com/view/13305175/TzJphzAS
+
+The application has been deployed at https://hacko-backend-apis.herokuapp.com/
