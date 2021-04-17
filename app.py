@@ -134,6 +134,7 @@ def fetchAllLabels():
         {'label' : 'education','fetchUrl':'fetchEducation'}
     ]
     return jsonify(array)
+    
 @app.route('/fetchAllNames')
 def fetchAllNames():
     nameArray = []
