@@ -15,7 +15,7 @@ def index():
         'documentationUrl' : 'https://documenter.getpostman.com/view/13305175/TzJphzAS'
     })
 
-jsonFile = open('../Clustered_Data/final_data.json',)
+jsonFile = open('/Clustered_Data/final_data.json',)
 data = json.load(jsonFile)
 
 @app.route('/fetchAll')
