@@ -5,7 +5,7 @@ chromedriver insatlled
 
 For running the scraper
 
-Set up chromedriver
+Set up chromedriver //windows
 
 Step 1: First download the ChromeDriver. Users need to download ChromeDriver for their respective Operating systems from this link(https://chromedriver.chromium.org/downloads). R
 
@@ -24,9 +24,14 @@ Step 3: Now copy the path where the ChromeDriver file is saved to set the system
 
 4. Now, from the available options under system variables, select the Path option and click on Edit
 
-Selenium with ChromeDriver
+
 
 5. At the end of the string, enter a semicolon ‘;’ and paste the path of your ChromeDriver file that you copied earlier, and click OK.
+
+//Linux
+PATH=$PATH:/path/to/driver/chrome-driver
+
+Add the above line to your /home/<user>/.profile file to make it permanent.
 
 For flask app
 
