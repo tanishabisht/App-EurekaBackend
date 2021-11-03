@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "501c5507-2a3e-4d0d-b976-1d1ac0b0258f",
+		"name": "VIT HACK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Repo",
+			"item": [
+				{
+					"name": "POST Repo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDhkNDBmYmIwZGQ4ZjAwMTVmMzFhYmYiLCJpYXQiOjE2MTk4NzAwMDB9.ulmSqPi-VP5Ryco4dQVueuc8Om4FtEKRUynOsxth3Fw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseName\" :\"SEPM\",\r\n    \"courseDesc\" : \"dogShit\",\r\n    \"topicInfo\" : [\r\n        {\"topic\":\"vere\", \"topicDesc\":\"derer\"},\r\n        {\"topic\":\"here\", \"topicDesc\":\"dear\"}\r\n    ],\r\n    \"courseLinks\" : [\r\n        {\"linkTopic\":\"erwe\", \"link\":\"hhtp:gfg.com\"}\r\n    ],\r\n    \"tags\" : [\"tag1\",\"tag2\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vit-backend-coffee.herokuapp.com/repo",
+							"protocol": "https",
+							"host": [
+								"vit-backend-coffee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"repo"
+							]
+						},
+						"description": "create a new repo"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Repo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDhkNDBmYmIwZGQ4ZjAwMTVmMzFhYmYiLCJpYXQiOjE2MTk4NzQ4MDR9.SiUqagxL5QfF2n9S4_gEKYP7FM12kA90hsawAInAnws",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vit-backend-coffee.herokuapp.com/repos",
+							"protocol": "https",
+							"host": [
+								"vit-backend-coffee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"repos"
+							]
+						},
+						"description": "to get all repo from my profile"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Repo (id)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vit-backend-coffee.herokuapp.com/repos/608d67aebb317b00152c3a90",
+							"protocol": "https",
+							"host": [
+								"vit-backend-coffee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"repos",
+								"608d67aebb317b00152c3a90"
+							]
+						},
+						"description": "get a repo by Id"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Repo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://vit-backend-coffee.herokuapp.com/repos/608d84c88a47d800157ac0b5",
+							"protocol": "https",
+							"host": [
+								"vit-backend-coffee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"repos",
+								"608d84c88a47d800157ac0b5"
+							]
+						},
+						"description": "to delete a repo"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Repo (tag)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDhkNDBmYmIwZGQ4ZjAwMTVmMzFhYmYiLCJpYXQiOjE2MTk4NzAwMDB9.ulmSqPi-VP5Ryco4dQVueuc8Om4FtEKRUynOsxth3Fw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vit-backend-coffee.herokuapp.com/getrepoBytags/tag1",
+							"protocol": "https",
+							"host": [
+								"vit-backend-coffee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"getrepoBytags",
+								"tag1"
+							]
+						},
+						"description": "Get repo by tag"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Image",
+			"item": [
+				{
+					"name": "POST Img",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDhkNDBmYmIwZGQ4ZjAwMTVmMzFhYmYiLCJpYXQiOjE2MTk4NzAwMDB9.ulmSqPi-VP5Ryco4dQVueuc8Om4FtEKRUynOsxth3Fw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profile_photo",
+									"type": "file",
+									"src": "/C:/Users/TANISHA/Desktop/Capture.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://vit-backend-coffee.herokuapp.com/users/me/upload",
+							"protocol": "https",
+							"host": [
+								"vit-backend-coffee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"me",
+								"upload"
+							]
+						},
+						"description": "to input an image"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDhkNDBmYmIwZGQ4ZjAwMTVmMzFhYmYiLCJpYXQiOjE2MTk4NzAwMDB9.ulmSqPi-VP5Ryco4dQVueuc8Om4FtEKRUynOsxth3Fw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vit-backend-coffee.herokuapp.com/users/myImage",
+							"protocol": "https",
+							"host": [
+								"vit-backend-coffee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"myImage"
+							]
+						},
+						"description": "to get the profile image"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "POST user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"username1\",\r\n    \"email\": \"email1@gmail.com\",\r\n    \"desc\": \"desc1\",\r\n    \"collegeName\":\"SRM1\",\r\n    \"password\": \"password1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vit-backend-coffee.herokuapp.com/users",
+							"protocol": "https",
+							"host": [
+								"vit-backend-coffee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "to register a user"
+					},
+					"response": []
+				},
+				{
+					"name": "POST login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"email1@gmail.com\",\r\n    \"password\": \"password1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vit-backend-coffee.herokuapp.com/users/login",
+							"protocol": "https",
+							"host": [
+								"vit-backend-coffee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						},
+						"description": "to login a user"
+					},
+					"response": []
+				},
+				{
+					"name": "GET users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vit-backend-coffee.herokuapp.com/users",
+							"protocol": "https",
+							"host": [
+								"vit-backend-coffee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "to get all users"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Current User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDhkNDBmYmIwZGQ4ZjAwMTVmMzFhYmYiLCJpYXQiOjE2MTk4NzE3OTJ9.NAu-utPPou0EDkWl7TsQlipMTEjymVwM8MHqqH6MfB8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vit-backend-coffee.herokuapp.com/users/myprofile",
+							"protocol": "https",
+							"host": [
+								"vit-backend-coffee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"myprofile"
+							]
+						},
+						"description": "to get currently logged in user info"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://vit-backend-coffee.herokuapp.com/users/me",
+							"protocol": "https",
+							"host": [
+								"vit-backend-coffee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
